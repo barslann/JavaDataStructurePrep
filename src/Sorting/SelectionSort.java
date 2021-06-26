@@ -12,16 +12,14 @@ public class SelectionSort {
 
     }
     public static void selectionSortAlgo(int[] arr){
-        int unsortedIndex = arr.length-1;
-        for (int i = 0; i < arr.length; i++) {
+        for (int unsortedIndex = arr.length-1; unsortedIndex > 0; unsortedIndex--) { // eleman sayisi kadar calisiyor
             int maxIdx = 0;
-            for (int j = 1; j < unsortedIndex+1; j++) {
+            for (int j = 1; j <= unsortedIndex; j++) {
                 if (arr[j] > arr[maxIdx]) {
                     maxIdx = j;
                 }
             }
             swap(arr, maxIdx , unsortedIndex);
-            unsortedIndex--;
         }
     }
     private static void swap(int[] arr, int i, int j) {
