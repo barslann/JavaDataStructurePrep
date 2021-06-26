@@ -4,17 +4,12 @@ import java.util.Arrays;
 
 public class BubbleSort {
 
-    // pass by value  - primitive
-    // pass by reference - reference
     public static void main(String[] args) {
         int[] arr = {20,35,-15,7,0,55,1,-22,45};
-        int x = 5;
-        bubbleSortAlgo(arr, x);
+        bubbleSortAlgo(arr);
         System.out.println(Arrays.toString(arr));
-        System.out.println(x);
     }
-    public static void bubbleSortAlgo(int[] arr, int x){
-        x = 7;
+    public static void bubbleSortAlgo(int[] arr){
         int unsortedIndex = arr.length-1;
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < unsortedIndex; j++) {
