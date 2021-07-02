@@ -1,0 +1,33 @@
+ArrayList -> version 1.2
+
+    - Default size is 10
+    - add, delete operations -> O(n) time complexity
+    - contains() needs to compare objects. For this, objects need to implement equals and hashcode methods.
+
+    - Note that this implementation is not synchronized. If multiple threads access an ArrayList instance concurrently,
+      and at least one of the threads modifies the list structurally, it must be synchronized externally.
+        -A structural modification is any operation that adds or deletes one or more elements, or explicitly resizes the backing array;
+         merely setting the value of an element is not a structural modification
+        -https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html
+
+
+    - to convert arraylist to array use toArray() method. It returns an array of objects.
+        .toArray() -> return Object[]
+        - if you wanna return specific type, then you should use the syntax below
+            -.toArray(new Employee[employeeList.size()])
+
+Vector  -> version 1.0
+
+    - Thread Safe ArrayList
+        -meaning it is OK to use it from multiple threads
+        - Synchronization is slow.That is why ArrayList is introduced version 1.2
+
+    - If a thread-safe implementation is not needed, it is recommended to use ArrayList in place of Vector.
+        -https://docs.oracle.com/javase/8/docs/api/java/util/Vector.html
+
+LinkedList
+
+    - inserting,deleting from the front of the list -> O(1)
+    - A singly linked list is best used when you want to insert and remove items from the front of the list
+    - continue to grow without having to be resized
+    - Since you need keep value and reference, this could be a disadvantages of using linked list if your memory is really tight!
